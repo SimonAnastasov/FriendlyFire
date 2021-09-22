@@ -1,8 +1,92 @@
 body {
     margin: 0;
     padding: 0;
+    overflow: hidden;
+
+    background: url('./media/bg.jpg');
+    background-size: cover;
+    background-position-y: 17%;
 }
 
 body * {
     box-sizing: border-box;
+}
+
+.player {
+    width: 90px;
+    height: 170px;
+
+    position: absolute;
+    left: 20%;
+    top: calc(100vh - 170px);
+}
+
+#player2 {
+    left: 70%;
+}
+
+.player .stickman {
+    width: inherit;
+    height: inherit;
+}
+
+.player .head {
+    width: 60%;
+
+    position: relative;
+    top: -175px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.flipX {
+    transform: scaleX(-1);
+}
+
+.bullet {
+    position: absolute;
+}
+
+.wall {
+    width: 200px;
+    height: 60px;
+}
+
+.playerInfo .playerHearts {
+    display: flex;
+    margin-top: 5px;
+    margin-left: 40px;
+}
+
+.playerInfo .playerBullets {
+    display: flex;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.playerInfo .playerHearts img {
+    margin-top: 10px;
+    margin-left: 5px;
+    width: 30px;
+}
+
+.playerInfo .playerBullets img {
+    width: 30px;
+    transform: rotate(-90deg);
+}
+
+#player2Info {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#win {
+    width: 100vw;
+    text-align: center;
+    font-size: 150px;
+    color: white;
+    position: absolute;
+
+    display: none;
 }
